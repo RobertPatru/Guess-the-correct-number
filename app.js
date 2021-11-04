@@ -29,7 +29,11 @@ submitNumber.addEventListener('click', function(){
         else if ( lifeRemained == 0) {
             gameOver(false, `You lost! The correct number was ${winningNumber}`);
         }        
-    }clearInput();
+        else {
+            setMessage(`${numberIntroduced} was wrong. You have ${lifeRemained} left`, 'red');
+        }
+    }
+    clearInput();
 });
 
 document.querySelector('body').addEventListener('mousedown', function(object){
